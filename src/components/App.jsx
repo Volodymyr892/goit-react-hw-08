@@ -13,10 +13,10 @@ import { fetchContacts } from "../redux/contacts/operations";
 
 
 export default function App() {
-//     const dispatch = useDispatch()
-//     useEffect (()=>{
-//         dispatch(fetchContacts())
-//    },[dispatch])
+    const dispatch = useDispatch()
+    useEffect (()=>{
+        dispatch(fetchContacts())
+   },[dispatch])
     return (
         <Layout>
                 <Navigation/>
