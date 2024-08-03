@@ -7,7 +7,7 @@ const filterSlice = createSlice({
         number: '',
     },
     reducers: {
-        
+
     }
 })
-export const filterReduser = filterSlice.reducer;
+export const filterReducer = filterSlice.reducer;

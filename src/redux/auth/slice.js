@@ -1,6 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
+// import { createSlice } from "@reduxjs/toolkit";
 
-const authSlice = createSlice(
+// const authSlice = createSlice(
 
-)
-export const authReduser =authSlice.reducer;
+// )
+// export const authReduser =authSlice.reducer;
