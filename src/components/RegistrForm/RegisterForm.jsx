@@ -1,13 +1,22 @@
 import { Formik,Form, Field } from "formik";
+import { useDispatch } from "react-redux";
+import { register } from "../../redux/auth/operations";
 
 export default function RegisterForm() {
+     const dispatch = useDispatch()
+    const handleSubmit = (values, actions) => {
+        dispatch(register(values))
+        actions.resetForm();
+    };
     return (
         
         <Formik  initialValues={{
             name: "",
             email: "",
             password: "",
-            }}>
+            }}
+            onSubmit={handleSubmit}
+            >
                 <Form>
                     <label>
                         Username 
@@ -19,7 +28,7 @@ export default function RegisterForm() {
                     </label>
                     <label >
                         Password
-                        <Field type="password" name="email"/>
+                        <Field type="password" name="password"/>
                     </label>
                     <button type="submit">Register</button>
                 </Form>
