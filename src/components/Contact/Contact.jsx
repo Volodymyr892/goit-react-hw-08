@@ -1,15 +1,19 @@
-// import { useDispatch } from "react-redux"
-// import { deleteContact } from "../../redux/contacts/operations"
+import { useDispatch } from "react-redux"
+import { deleteContact } from "../../redux/contacts/operations"
 
-export default function Contact() {
-    // const dispatch = useDispatch()
+export default function Contact({ contact:{name,number,id} }) {
+    const dispatch = useDispatch()
+    const handleDelete = (id) => {
+        console.log('Deleting contact with ID:', id); // Додати цю лінію для перевірки
+        dispatch(deleteContact(id));
+      };
     return(
             <>
                 <div>
-                    <p>Name </p>
-                    <p>Number </p>
+                    <p>Name {name}</p>
+                    <p>Number {number}</p>
                 </div>
-                <button >Delete</button>
+                <button onClick={() =>handleDelete(id)}>Delete</button>
             </>
     )
 }

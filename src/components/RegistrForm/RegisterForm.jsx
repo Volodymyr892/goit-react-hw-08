@@ -20,7 +20,7 @@ export default function RegisterForm() {
                 <Form>
                     <label>
                         Username 
-                        <Field type="text" name="name"/>
+                        <Field type="name" name="name"/>
                     </label>
                     <label>
                         Email 
