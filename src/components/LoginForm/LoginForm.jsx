@@ -1,6 +1,7 @@
 import { Formik, Form, Field} from "formik";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/auth/operations";
+import css from "./LoginForm.module.css"
 
 export default function LoginForm() {
     const dispatch = useDispatch()
@@ -15,7 +16,7 @@ export default function LoginForm() {
            }}
            onSubmit={handleSubmit}
            >
-            <Form>
+            <Form  className={css.form}>
                 <label>
                     Email
                     <Field type="email" name="email"/>

@@ -2,6 +2,7 @@ import { Field, Formik, Form, ErrorMessage} from "formik";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { addContacts } from "../../redux/contacts/operations";
+import css from "./ContactForm.module.css"
 
 const UserSchema = Yup.object().shape(
     {
@@ -34,16 +35,16 @@ export default function ContactForm() {
         validationSchema={UserSchema}
         onSubmit ={handleSubmit}
         >
-            <Form>
-                <div>
+            <Form className={css.form}>
+                <div className={css.formField}>
                     <p>Name</p>
                     <Field type="text" name="name"/>
-                    <ErrorMessage name="name"/>
+                    <ErrorMessage className={css.errorMessage} name="name" component="span"/>
                 </div>
                 <div>
                     <p>Number</p>
                     <Field type="text" name="number"/>
-                    <ErrorMessage name="number" component="span"/>
+                    <ErrorMessage className={css.errorMessage} name="number" component="span"/>
                 </div>
                 <button type="submit">Add Contact</button>
             </Form>
