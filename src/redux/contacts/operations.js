@@ -33,7 +33,6 @@ export const deleteContact = createAsyncThunk(
         } catch (error) {
             return thunkAPI.rejectWithValue(error.message);
         }
-
     }
 )
 

@@ -5,7 +5,7 @@ export default function AuthNav() {
     return(
         <nav>
            <NavLink className={css.link} to="/register">Register</NavLink>
-           <NavLink className={css.link} to="/login">Login</NavLink>
+           <NavLink className={css.link} to="/login">Log in</NavLink>
         </nav>
     )
 }

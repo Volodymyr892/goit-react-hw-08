@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Фіксує хедер */
+    position: fixed; 
   top: 0; /* Відступ від верху */
   left: 50%; /* Відступ від лівого краю */
   transform: translateX(-50%); /* Центрування хедера */
