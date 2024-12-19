@@ -22,9 +22,9 @@ export default function App() {
         useEffect(( )=> {
                 dispatch(refreshUser())
         }, [dispatch]);
-   return isRefreching ? (
+        return isRefreching ? (
         <div>Refreshing user please wait...</div>
-      ) :  (
+        ) :  (
         <Layout>
                 <Routes>
                         <Route path="/" element={<HomePage/>}/>
